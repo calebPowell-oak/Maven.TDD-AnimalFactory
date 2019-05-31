@@ -40,4 +40,69 @@ public class CatTest {
         Assert.assertEquals(givenId, retrievedId);
     }
 
+    @Test
+    public void setNameTest() {
+        // Given (cat data)
+        String givenName = "Zula";
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+        String actual = "Yoloswag";
+
+        // When (a cat is constructed)
+        Cat cat = new Cat(givenName, givenBirthDate, givenId);
+        cat.setName(actual);
+
+        // Then (we expect the given data, to match the retrieved data)
+        String expected = cat.getName();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void speakTest() {
+        // Given (cat data)
+        String givenName = "Zula";
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+        Cat cat = new Cat(givenName, givenBirthDate, givenId);
+
+        // When
+        String actual = cat.speak();
+
+        // Then (we expect the given data, to match the retrieved data)
+        String expected = "meow!";
+    }
+
+    @Test
+    public void setBirthDateTest() {
+        // Given (cat data)
+        String givenName = "Zula";
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+        Cat cat = new Cat(givenName, givenBirthDate, givenId);
+
+        // When
+        Date expected = new Date();
+        cat.setBirthDate(expected);
+
+        // Then (we expect the given data, to match the retrieved data)
+        Date actual = cat.getBirthDate();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setEatTest() {
+        // Given (cat data)
+        String givenName = "Zula";
+        Date givenBirthDate = new Date();
+        Integer givenId = 0;
+        String actual = "Yoloswag";
+
+        // When (a cat is constructed)
+        Cat cat = new Cat(givenName, givenBirthDate, givenId);
+        cat.setName(actual);
+
+        // Then (we expect the given data, to match the retrieved data)
+        String expected = cat.getName();
+        Assert.assertEquals(expected, actual);
+    }
 }
